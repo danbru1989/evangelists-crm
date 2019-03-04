@@ -1,0 +1,59 @@
+// ========== Admin Page Styles SCSS ========== //
+
+.ecrm-notice {
+    color: #666;
+    text-align: center;
+    font-style: italic;
+    margin: 50px 0;
+}
+
+.ecrm-quick-action-wrap {
+    display: flex;
+    justify-content: space-around;
+
+    .left-column, .right-column {
+        padding-right: 30px;
+        &:last-of-type {padding-right: 0;}
+    }
+
+    .dashicons {padding-right: 10px;}
+
+    .address, .communication {display: inline-block;}
+}
+
+.ecrm-new-entry-wrap {
+    text-align: right;
+}
+
+.ecrm-communications-table {
+    width: 100%;
+    margin-top: 15px;
+
+    thead th {
+        border: #EEEEEE solid 1px;
+    }
+
+    th, td {
+        padding: 5px 10px;
+    }
+
+    th {
+        text-align: left;
+    }
+
+    tr:nth-child(even) {
+        background: rgb(245, 245, 245);
+    }
+
+    .date {font-weight: bold;}
+
+    a {
+        font-weight: bold;
+        text-decoration: none;
+    }
+
+    .date-column,
+    .type-column {white-space: nowrap;}
+    
+    .edit-column {text-align: center;}
+}
