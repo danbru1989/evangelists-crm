@@ -102,7 +102,7 @@ class ECRM_Events_List_Widget extends \WP_Widget {
 	 * @param array $instance The widget options
 	 */
 	public function form( $instance ) {
-		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'Upcoming Meetings', CHILD_THEME_TEXT_DOMAIN );
+		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'Upcoming Meetings', ECRM_PLUGIN_TEXT_DOMAIN );
 		?>
 			<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
