@@ -47,9 +47,9 @@ class ECRM_Events_List_Widget extends \WP_Widget {
 		}
 
 		// Events Query
-		$args = array(
+		$query_args = array(
 			'post_type'      => 'event',
-			'posts_per_page' => 5,
+			'posts_per_page' => $instance['number_of_events'],
 			'orderby'        => 'meta_value',
 			'meta_key'       => 'event_dates_end_date',
 			'order'          => 'ASC',
@@ -67,7 +67,7 @@ class ECRM_Events_List_Widget extends \WP_Widget {
 			),
 		);
 
-		$events = new WP_Query( $args );
+		$events = new WP_Query( $query_args );
 
 		if ( $events->have_posts() ) {
 
@@ -94,6 +94,7 @@ class ECRM_Events_List_Widget extends \WP_Widget {
 
 			echo '</ul>';
 		}
+		wp_reset_postdata();
 
 		echo $args['after_widget'];
 	}
@@ -106,10 +107,15 @@ class ECRM_Events_List_Widget extends \WP_Widget {
 	 */
 	public function form( $instance ) {
 		$title = ! empty( $instance['title'] ) ? $instance['title'] : __( 'Upcoming Meetings', ECRM_PLUGIN_TEXT_DOMAIN );
+		$number_of_events = ! empty( $instance['number_of_events'] ) ? $instance['number_of_events'] : __( '5', ECRM_PLUGIN_TEXT_DOMAIN );
 		?>
 			<p>
 			<label for="<?php echo $this->get_field_id( 'title' ); ?>"><?php esc_html_e( 'Title:' ); ?></label>
 			<input class="widefat" id="<?php echo $this->get_field_id( 'title' ); ?>" name="<?php echo $this->get_field_name( 'title' ); ?>" type="text" value="<?php echo esc_attr( $title ); ?>">
+			</p>
+			<p>
+			<label for="<?php echo $this->get_field_id( 'number_of_events' ); ?>"><?php esc_html_e( 'Number of Events:' ); ?></label>
+			<input class="widefat" id="<?php echo $this->get_field_id( 'number_of_events' ); ?>" name="<?php echo $this->get_field_name( 'number_of_events' ); ?>" type="text" value="<?php echo esc_attr( $number_of_events ); ?>">
 			</p>
 		<?php
 	}
