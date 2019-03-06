@@ -33,12 +33,23 @@ function ecrm_do_travel_news_loop() {
 
 	// Query events for current or next event.
 	$args = array(
-		'post_type'        => 'event',
-		'suppress_filters' => false,
-		'posts_per_page'   => 1,
-		'event_end_after'  => 'today',
-		'meta_key'         => 'event_display_settings',
-		'meta_value'       => 'public',
+		'post_type'      => 'event',
+		'posts_per_page' => 1,
+		'orderby'        => 'meta_value',
+		'meta_key'       => 'event_dates_end_date',
+		'order'          => 'ASC',
+		'meta_query'     => array(
+			array(
+				'key'     => 'event_dates_end_date',
+				'value'   => date( 'Ymd' ),
+				'type'    => 'DATE',
+				'compare' => '>=',
+			),
+			array(
+				'key'   => 'event_display_settings',
+				'value' => 'public',
+			),
+		),
 	);
 
 	$event = new \WP_Query( $args );

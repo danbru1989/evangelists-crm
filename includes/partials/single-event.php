@@ -38,10 +38,8 @@ function ecrm_add_single_event_content() {
 
 	echo '</div>';
 
-	if ( function_exists( 'ecrm_get_event_dates' ) ) {
-		$dates = ecrm_get_event_dates( 'F j, Y' );
-		$days  = ecrm_get_event_dates( 'l' );
-	}
+	$dates = ecrm_get_event_dates( 'F j, Y' );
+	$days  = ecrm_get_event_dates( 'l' );
 
 	?>
 		<div class="columns-wrap">

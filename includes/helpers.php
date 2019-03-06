@@ -498,7 +498,7 @@ function ecrm_get_event_no_year_dates( $format = 'M j', $separator = ' – ', $p
  * @param string $separator The separator to intelligently divide dates with.
  * @param int    $post_id Add an optional post ID. Default is current post.
  *
- * Íreturn @dates
+ * return @dates
  */
 function ecrm_get_event_day_dates( $format = 'l', $separator = ' – ', $post_id = 0 ) {
 
@@ -516,5 +516,19 @@ function ecrm_get_event_day_dates( $format = 'l', $separator = ' – ', $post_id
 		$dates = ecrm_get_event_start( 'l', $post_id ) . $separator . ecrm_get_event_end( 'l', $post_id );
 
 		return $dates;
+	}
+}
+
+/**
+ * Event Conditional: Has Organization?
+ *
+ * @return boolean
+ */
+function ecrm_has_organization() {
+
+	if ( get_field( 'event_organization' ) ) {
+		return true;
+	} else {
+		return false;
 	}
 }
