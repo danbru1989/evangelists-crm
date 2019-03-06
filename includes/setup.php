@@ -99,14 +99,14 @@ function ecrm_register_custom_post_types() {
 	 */
 
 	$labels = array(
-		'name'          => __( 'Itinerary', ECRM_PLUGIN_TEXT_DOMAIN ),
+		'name'          => __( 'Events', ECRM_PLUGIN_TEXT_DOMAIN ),
 		'singular_name' => __( 'Event', ECRM_PLUGIN_TEXT_DOMAIN ),
-		'plural_name' => __( 'Events', ECRM_PLUGIN_TEXT_DOMAIN ),
+		'plural_name'   => __( 'Events', ECRM_PLUGIN_TEXT_DOMAIN ),
 		'all_items'     => __( 'All Events', ECRM_PLUGIN_TEXT_DOMAIN ),
 	);
 
 	$args = array(
-		'label'                 => __( 'Itinerary', ECRM_PLUGIN_TEXT_DOMAIN ),
+		'label'                 => __( 'Events', ECRM_PLUGIN_TEXT_DOMAIN ),
 		'labels'                => $labels,
 		'description'           => 'This is for storing itinerary information for meetings, personal events, and other itinerary records.',
 		'public'                => true,

@@ -50,6 +50,9 @@ class ECRM_Events_List_Widget extends \WP_Widget {
 		$args = array(
 			'post_type'      => 'event',
 			'posts_per_page' => 5,
+			'orderby'        => 'meta_value',
+			'meta_key'       => 'event_dates_end_date',
+			'order'          => 'ASC',
 			'meta_query'     => array(
 				array(
 					'key'     => 'event_dates_end_date',

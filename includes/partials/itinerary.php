@@ -20,6 +20,9 @@ function ecrm_add_itinerary_loop() {
 	$args = array(
 		'post_type'      => 'event',
 		'posts_per_page' => -1,
+		'orderby' => 'meta_value',
+		'meta_key' => 'event_dates_end_date',
+		'order' => 'ASC',
 		'meta_query'     => array(
 			array(
 				'key'     => 'event_dates_end_date',
