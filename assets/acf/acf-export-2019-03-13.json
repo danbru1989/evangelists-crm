@@ -121,7 +121,7 @@
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
-        "active": 1,
+        "active": true,
         "description": ""
     },
     {
@@ -183,7 +183,7 @@
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
-        "active": 1,
+        "active": true,
         "description": ""
     },
     {
@@ -279,7 +279,7 @@
             "discussion",
             "comments"
         ],
-        "active": 1,
+        "active": true,
         "description": ""
     },
     {
@@ -341,7 +341,7 @@
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
-        "active": 1,
+        "active": true,
         "description": ""
     },
     {
@@ -946,13 +946,29 @@
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
-        "active": 1,
+        "active": true,
         "description": ""
     },
     {
         "key": "group_5c18368a47ad6",
         "title": "Event Details",
         "fields": [
+            {
+                "key": "field_5c890d14798da",
+                "label": "General",
+                "name": "",
+                "type": "tab",
+                "instructions": "",
+                "required": 0,
+                "conditional_logic": 0,
+                "wrapper": {
+                    "width": "",
+                    "class": "",
+                    "id": ""
+                },
+                "placement": "top",
+                "endpoint": 0
+            },
             {
                 "key": "field_5c6da8270d3c5",
                 "label": "Primary Contact",
@@ -1031,7 +1047,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "50",
+                    "width": "40",
                     "class": "",
                     "id": ""
                 },
@@ -1083,7 +1099,7 @@
                 "required": 0,
                 "conditional_logic": 0,
                 "wrapper": {
-                    "width": "50",
+                    "width": "60",
                     "class": "",
                     "id": ""
                 },
@@ -1154,7 +1170,7 @@
                         "default_value": "",
                         "placeholder": "Preaching all day Sunday and Mon-Fri at 7:00",
                         "maxlength": "",
-                        "rows": 3,
+                        "rows": 5,
                         "new_lines": ""
                     },
                     {
@@ -1173,7 +1189,7 @@
                         "default_value": "",
                         "placeholder": "Specials in the AM and PM services",
                         "maxlength": "",
-                        "rows": 3,
+                        "rows": 5,
                         "new_lines": ""
                     },
                     {
@@ -1249,7 +1265,7 @@
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "40",
+                            "width": "45",
                             "class": "",
                             "id": ""
                         },
@@ -1274,7 +1290,7 @@
                         "required": 0,
                         "conditional_logic": 0,
                         "wrapper": {
-                            "width": "60",
+                            "width": "55",
                             "class": "",
                             "id": ""
                         },
@@ -1339,6 +1355,41 @@
                         "maxlength": "",
                         "rows": 5,
                         "new_lines": ""
+                    },
+                    {
+                        "key": "field_5c890d3d798db",
+                        "label": "Notes",
+                        "name": "",
+                        "type": "tab",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "placement": "top",
+                        "endpoint": 0
+                    },
+                    {
+                        "key": "field_5c895e1f51b67",
+                        "label": "",
+                        "name": "notes",
+                        "type": "wysiwyg",
+                        "instructions": "",
+                        "required": 0,
+                        "conditional_logic": 0,
+                        "wrapper": {
+                            "width": "",
+                            "class": "",
+                            "id": ""
+                        },
+                        "default_value": "",
+                        "tabs": "visual",
+                        "toolbar": "basic",
+                        "media_upload": 0,
+                        "delay": 0
                     }
                 ]
             }
@@ -1358,7 +1409,7 @@
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
-        "active": 1,
+        "active": true,
         "description": ""
     },
     {
@@ -2024,7 +2075,7 @@
         "label_placement": "top",
         "instruction_placement": "label",
         "hide_on_screen": "",
-        "active": 1,
+        "active": true,
         "description": ""
     }
 ]
